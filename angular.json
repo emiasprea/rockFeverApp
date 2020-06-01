@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "rockfever": {
+        "rockFever": {
             "projectType": "application",
             "schematics": {},
             "root": "",
