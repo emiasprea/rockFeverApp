@@ -20,14 +20,14 @@
                         "tsConfig": "tsconfig.app.json",
                         "aot": true,
                         "assets": [
-                            "src/favicon.ico",
-                            "src/assets"
+                            "./src/favicon.ico",
+                            "./src/assets"
                         ],
                         "styles": [
-                            "src/styles.css"
+                            "./src/styles.css"
                         ],
                         "scripts": [
-                            "src/assets/scripts/swiper.min.js"
+                            "./src/assets/scripts/swiper.min.js"
                         ]
                     },
                     "configurations": {
