@@ -1,0 +1,33 @@
+<br><br>
+
+
+<div class=" animated fadeIn fast">
+    <div class=" animated fadeIn fondoArtistas shadow mt-5" style="height: 380px; width: 100%;"></div>
+    <br>
+</div>
+<br>
+<br>
+
+<h1 class="animated fadeIn">
+    Artistas
+</h1>
+<hr>
+<div class="row container animated fadeIn mb-5" *ngFor="let artista of artistas">
+    <div class="col-3">
+        <h3 style="text-align: center ; cursor:pointer" [routerLink]="['/artista',artista.id]">
+            {{ artista.nombre }}
+        </h3>
+        <img [routerLink]="['/artista',artista.id]" class="tamañoFotoArtista" style="display: block; margin: auto; cursor:pointer" [src]=artista.foto>
+    </div>
+    <div class="col-6">
+        <br><br><br>
+        <p>{{ artista.intro }}</p>
+    </div>
+    <div class="col-3">
+        <br><br><br>
+        <img [routerLink]="['/banda',getBandaArtista(artista.idbanda).id]" class="tamañoFotoLogo tamañoImagen" [src]=getBandaArtista(artista.idbanda).logo style="cursor: pointer;">
+    </div>
+    <hr>
+
+</div>
+<br>

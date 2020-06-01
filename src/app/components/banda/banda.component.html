@@ -1,0 +1,39 @@
+<div class="container">
+    <br><br><br><br>
+    <img class="tamañoImagen animated fadeIn fast" style="display: block; margin: auto; border-radius: 10%;" [src]=banda.logo>
+    <br>
+
+    <hr>
+    <h3 class="animated fadeIn">
+        Integrantes
+    </h3>
+    <br>
+    <div class="card-group">
+        <div class="animated card fadeIn fast fondoTarjetas" *ngFor="let i of artistas">
+            <img class="card-img-top tamañoFotoArtista" [routerLink]="['/artista',i.id]" style="display: block; margin: auto; cursor:pointer" [src]=i.foto [alt]=i.nombre>
+            <div class="card-body">
+                <h5 class="card-title text-center" [routerLink]="['/artista',i.id]" style="cursor:pointer">{{i.nombre}}</h5>
+                <p class="card-text textoTarjetas">{{i.intro}}</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3 class="animated fadeIn">Biografia</h3>
+    <hr>
+    <br>
+    <div>
+        <img class="animated fadeIn shadow" style="border-radius:5px; max-width: 100% ; max-height: 500px; display: block; margin:auto" [src]=banda.fotogrupal>
+    </div>
+    <br><br>
+    <div class="container" style="background-color:rgba(f5, f5, f5, 1);">
+        <p class="animated fadeIn">
+            {{banda.bio}}
+        </p>
+
+    </div>
+    <hr>
+
+    <a (click)="volver()" class="btn btn-dark" style="color:whitesmoke ; margin-left: 45.5%;">Volver</a>
+
+</div>

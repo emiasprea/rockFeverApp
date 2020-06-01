@@ -1,0 +1,24 @@
+<br>
+<br>
+<div class=" animated fadeIn fast mt-5">
+    <div class=" animated fadeIn fondoBandas shadow mt-5" style="height: 380px; width: 100%;"></div>
+    <br>
+</div>
+<br><br>
+<h1 class="animated fadeIn">
+    Bandas
+</h1>
+<hr>
+<br>
+<div class="card-columns">
+    <div class="card animated fadeIn fondoTarjetas" *ngFor="let banda of bandas">
+        <img [src]=banda.logo class="card-img-top" style="padding: 16px;" [alt]="banda.nombre">
+        <div class="card-block card-body">
+            <h5 class="card-title text-center">{{ banda.nombre }}</h5>
+            <p class="card-text textoTarjetas">{{ banda.intro }}</p>
+            <p class="card-text"><small class="text-muted">Creada en el año {{ banda.anio }}</small></p>
+            <!-- <button class="btn btn-dark btn-block">Ver mas</button> -->
+            <a [routerLink]="['/banda',banda.id]" class="btn btn-dark btn-block">Ver mas...</a>
+        </div>
+    </div>
+</div>

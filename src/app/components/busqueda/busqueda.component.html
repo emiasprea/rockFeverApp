@@ -1,0 +1,63 @@
+<br><br><br><br>
+<div class="container animated fadeIn fast">
+    <h2 class="display-4">Resultados de la busqueda: {{terminoBuscado}}</h2>
+</div>
+<hr>
+<div class="container animated fadeIn" *ngIf="bandas.length == 0">
+    <div style="font-size: 20px;">
+        <br>
+        <h3>No hay bandas para mostrar.</h3>
+    </div>
+    <hr>
+</div>
+<div class="container animated fadeIn" *ngIf="artistas.length == 0">
+    <div style="font-size: 20px;">
+        <h3>No hay artistas para mostrar.
+        </h3>
+    </div>
+</div>
+<div *ngIf="bandas.length > 0">
+    <br>
+    <h1>
+        Bandas
+    </h1>
+    <br>
+    <div class="card-columns animated fadeIn">
+        <div class="card animated fadeIn fondoTarjetas" *ngFor="let banda of bandas">
+            <img [src]=banda.logo class="card-img-top" style="padding: 16px;" [alt]="banda.nombre">
+            <div class="card-block card-body">
+                <h5 class="card-title text-center">{{ banda.nombre }}</h5>
+                <p class="card-text textoTarjetas">{{ banda.intro }}</p>
+                <p class="card-text"><small class="text-muted">Creada en el año {{ banda.anio }}</small></p>
+                <!-- <button class="btn btn-dark btn-block">Ver mas</button> -->
+                <a [routerLink]="['/banda',banda.id]" class="btn btn-dark btn-block">Ver mas...</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+</div>
+<div *ngIf="artistas.length > 0">
+    <h1>
+        Artistas
+    </h1>
+    <br>
+    <div class="card-columns animated fadeIn">
+        <div class="card animated fadeIn fondoTarjetas" *ngFor="let artista of artistas">
+            <img [src]=artista.foto class="card-img-top" style="padding: 16px;" [alt]="artista.nombre">
+            <div class="card-block card-body">
+                <h5 class="card-title text-center">{{ artista.nombre }}</h5>
+                <p class="card-text textoTarjetas">{{ artista.intro }}</p>
+                <!-- <button class="btn btn-dark btn-block">Ver mas</button> -->
+                <a [routerLink]="['/artista',artista.id]" class="btn btn-dark btn-block">Ver mas...</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<a (click)="volver()" class="btn btn-dark" style="color:whitesmoke ; margin-left: 46.5%;">Volver</a>
+<div *ngIf="bandas.length == 0 && artistas.length == 0">
+    <div class="ocuparPaginaBusqueda"></div>
+</div>
