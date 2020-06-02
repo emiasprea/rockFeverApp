@@ -20,14 +20,14 @@
                         "tsConfig": "tsconfig.app.json",
                         "aot": true,
                         "assets": [
-                            "src/favicon.ico",
-                            "src/assets"
+                            "https://emiasprea.github.io/rockFever/src/favicon.ico",
+                            "https://emiasprea.github.io/rockFever/src/assets"
                         ],
                         "styles": [
-                            "src/styles.css"
+                            "https://emiasprea.github.io/rockFever/src/styles.css"
                         ],
                         "scripts": [
-                            "src/assets/scripts/swiper.min.js"
+                            "https://emiasprea.github.io/rockFever/src/assets/scripts/swiper.min.js"
                         ]
                     },
                     "configurations": {
