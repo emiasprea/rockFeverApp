@@ -20,14 +20,14 @@
                         "tsConfig": "tsconfig.app.json",
                         "aot": true,
                         "assets": [
-                            "src/favicon.ico",
-                            "src/assets"
+                            "/rockFever/src/favicon.ico",
+                            "/rockFever/src/assets"
                         ],
                         "styles": [
-                            "src/styles.css"
+                            "/rockFever/src/styles.css"
                         ],
                         "scripts": [
-                            "src/assets/scripts/swiper.min.js"
+                            "/rockFever/src/assets/scripts/swiper.min.js"
                         ]
                     },
                     "configurations": {
