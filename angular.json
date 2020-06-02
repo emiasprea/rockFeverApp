@@ -20,14 +20,14 @@
                         "tsConfig": "tsconfig.app.json",
                         "aot": true,
                         "assets": [
-                            "./src/favicon.ico",
-                            "./src/assets"
+                            "src/favicon.ico",
+                            "src/assets"
                         ],
                         "styles": [
-                            "./src/styles.css"
+                            "src/styles.css"
                         ],
                         "scripts": [
-                            "./src/assets/scripts/swiper.min.js"
+                            "src/assets/scripts/swiper.min.js"
                         ]
                     },
                     "configurations": {
@@ -61,18 +61,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "./rockFever:build"
+                        "browserTarget": "rockFever:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "./rockFever:build:production"
+                            "browserTarget": "rockFever:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "./rockFever:build"
+                        "browserTarget": "rockFever:build"
                     }
                 },
                 "test": {
